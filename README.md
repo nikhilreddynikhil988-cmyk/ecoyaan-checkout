@@ -1,37 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ecoyaan Checkout Flow
+
+A simplified checkout flow for Ecoyaan, built with Next.js, React, and Tailwind CSS.
+
+## Features
+
+- **Cart Page**: Displays products with SSR data fetching from a mock API.
+- **Shipping Address Form**: Collects user address with validation.
+- **Payment Confirmation**: Shows order summary and address before payment.
+- **Success Page**: Confirms the order placement.
+- **Navigation Bar**: Step-by-step progress indicator with clickable navigation.
+- **URL Redirects**: Handles common typos (e.g., /pament → /payment).
+- **State Management**: Uses React Context API to manage cart and address state.
+- **Responsive Design**: Mobile-friendly UI with Tailwind CSS.
+
+## Tech Stack
+
+- **Next.js 16** with App Router
+- **React 19**
+- **Tailwind CSS** for styling
+- **Context API** for state management
+- **Server-Side Rendering** for cart data fetching
+
+## Architecture
+
+- **SSR**: Cart data is fetched server-side using Next.js API routes.
+- **Client Components**: Forms and interactive elements use client-side rendering.
+- **Modular Components**: Reusable components for cart items, order summary, and address form.
+- **Validation**: Basic form validation for email, phone, and PIN code.
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/`: Next.js app router pages
+  - `page.js`: Cart page with SSR
+  - `checkout/page.js`: Address form
+  - `payment/page.js`: Order confirmation
+  - `success/page.js`: Success page
+  - `api/cart/route.js`: Mock API for cart data
+- `src/components/`: Reusable components
+  - `CartItemsPage.js`: Cart items display
+  - `OdderSummery.js`: Order summary
+  - `AddressProfe.js`: Address form
+- `src/context/CartContext.js`: Context for state management
+- `src/data/cartData.js`: Mock cart data
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy to Vercel or Netlify for easy hosting.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Mock data is used for demonstration.
+- Payment is simulated.
+- Form validation includes required fields, email format, 10-digit phone, and 6-digit PIN.
 "# ecoyaan-checkout" 
