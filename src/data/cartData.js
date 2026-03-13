@@ -1,4 +1,4 @@
-export const cartData = [
+export const cartData = 
 {
 "cartItems": [
 {
@@ -18,5 +18,4 @@ export const cartData = [
 ],
 "shipping_fee": 50,
 "discount_applied": 0
-}
-];
+};
