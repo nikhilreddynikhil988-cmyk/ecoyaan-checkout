@@ -10,7 +10,7 @@ export default function PaymentPage() {
   const { cart, address } = useContext(CartContext)
   const subtotal = cart.reduce((acc, item) => acc + item.product_price * item.quantity, 0)
   const shipping = 50
-  const total = subtotal + shippings
+  const total = subtotal + shipping
   const handlePayment = () => {
     router.push("/success")
   }
