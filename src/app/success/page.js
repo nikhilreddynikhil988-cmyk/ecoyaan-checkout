@@ -1,6 +1,11 @@
 import Link from "next/link"
 import { CheckIcon } from "@heroicons/react/24/solid"
 
+export const metadata = {
+  title: 'Purchase Successful - Ecoyaan',
+  description: 'Thank you for your purchase from Ecoyaan.',
+}
+
 export default function SuccessPage() {
     return (
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 pb-24">
